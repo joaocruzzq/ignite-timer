@@ -17,6 +17,25 @@ export const CountdownContainer = styled.div`
       border-radius: 8px;
       font-weight: bold;
    }
+
+   @media(max-width: 768px) {
+      display: grid;
+      
+      grid-template-areas:
+      'span span' 'span span';
+
+      width: 100%;
+
+      span {
+         display: flex;
+
+         font-size: 12rem;
+         padding: 2rem 0 3rem;
+
+         align-items: center;
+         justify-content: center;
+      }
+   }
 `
 
 export const Separator = styled.div`
@@ -31,4 +50,8 @@ export const Separator = styled.div`
    justify-content: center;
 
    color: ${props => props.theme["green-500"]};
+
+   @media(max-width: 768px) {
+      display: none;
+   }
 `

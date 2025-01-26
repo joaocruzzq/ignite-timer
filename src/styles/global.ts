@@ -7,6 +7,7 @@ export const GlobalStyles = createGlobalStyle`
       box-sizing: border-box;
    }
 
+
    :focus {
       outline: 0;
       box-shadow: 0 0 0 2px ${props => props.theme["green-500"]};
@@ -25,5 +26,20 @@ export const GlobalStyles = createGlobalStyle`
       font-size: 1rem;
    }
 
+   @media(max-width: 768px) {
+      html {
+         font-size: 84.5%;
+      }
+   }
 
+   @media(min-width: 769px) {
+      ::-webkit-scrollbar {
+         width: 12px;
+      }
+      
+      ::-webkit-scrollbar-thumb {
+         border-radius: 10px;
+         background-color: ${props => props.theme["gray-900"]};
+      }
+   }
 `
